@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block content %}
+<body>
+ <div class="content-section">
+   <form action = "/update/{{ x.id }}" method = "POST">
+     <fieldset>
+       <legend class="border-bottom mb-4">Edit the Details...</legend>
+         <div class="form-group">	 
+           SlNo : {{ x.id }} <br>
+         </div>
+         <div class="form-group">
+           Name : {{ x.Name }}<br>
+         </div>
+         <div class="form-group">
+          <label for = "name">Physics</label><br>  
+           <input type = "text" name = "Physics" required value="{{ x.physics }}"/><br>
+         </div>
+         <div class="form-group">
+          <label for = "name">Chemistry</label><br>  
+           <input type = "text" name = "chemistry" value="{{ x.chemistry }}" required /><br>
+         </div>
+         <div class="form-group">
+          <label for = "name">Maths</label><br>  
+           <input type = "text" name = "Mathematics" value="{{ x.maths }}" required /><br>
+         </div>
+         <div class="form-group">
+           <input class="btn btn-info btn-sm" type = "submit" value = "submit" /><br>
+         </div>
+     </fieldset>
+   </form>    
+ </div>
+</body>
+{% endblock content %}
